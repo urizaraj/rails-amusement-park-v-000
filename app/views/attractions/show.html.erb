@@ -7,6 +7,10 @@
   <li class="list-group-item"><strong>Min Height: </strong> <%= @attraction.min_height %></li>
 </ul>
 
-<%= form_tag go_on_attraction_path, method: 'post' do %>
-  <%= submit_tag 'Go on this ride', class: 'btn btn-primary' %>
+<% if current_user.admin %>
+  <%= link_to 'Edit Attraction', edit_attraction_path(@attraction) %>
+<% else %>
+  <%= form_tag go_on_attraction_path, method: 'post' do %>
+    <%= submit_tag 'Go on this ride', class: 'btn btn-primary' %>
+  <% end %>
 <% end %>

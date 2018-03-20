@@ -1,5 +1,9 @@
 <h1>All Attractions</h1>
 
 <% @attractions.each do |attraction| %>
-  <h2><%= link_to "Go on #{attraction.name}", attraction %></h2>
+  <h2><%= link_to "#{@prefix} #{attraction.name}", attraction %></h2>
+<% end %>
+
+<% if current_user.admin %>
+  <%= link_to 'New Attraction', new_attraction_path %>
 <% end %>
