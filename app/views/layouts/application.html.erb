@@ -26,6 +26,7 @@
           <li><%= link_to 'See attractions', attractions_path, class: 'navbar-link' %></li>
           <% if logged_in? %>
             <li><%= link_to current_user.name, current_user, class: 'navbar-link' %></li>
+            <li><%= link_to 'Log Out', logout_path, class: 'navbar-link' %></li>
             <% else %>
             <li><%= link_to 'Sign In', signin_path, class: 'navbar-link' %></li>
             <li><%= link_to 'Sign Up', new_user_path, class: 'navbar-link' %></li>
