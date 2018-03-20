@@ -1,0 +1,5 @@
+<h1>All Attractions</h1>
+
+<% @attractions.each do |attraction| %>
+  <h2><%= link_to attraction.name, attraction %></h2>
+<% end %>

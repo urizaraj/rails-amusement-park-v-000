@@ -1,6 +1,9 @@
-<div class="">
-  Name: <%= @user.name %>
-</div>
+<h1><%= @user.name %></h1>
+
+<% if @user.admin %>
+  <h2>ADMIN</h2>
+<% end %>
+
 <div class="">
   Happiness: <%= @user.happiness %>
 </div>
@@ -16,4 +19,9 @@
 
 <div class="">
   Mood: <%= @user.mood %>
+</div>
+
+
+<div class="">
+  <%= link_to 'Log Out', logout_path %>
 </div>
