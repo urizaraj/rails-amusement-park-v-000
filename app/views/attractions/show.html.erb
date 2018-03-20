@@ -1,0 +1,12 @@
+<h1><%= @attraction.name %></h1>
+
+<ul class="list-group">
+  <li class="list-group-item"><strong>Tickets: </strong> <%= @attraction.tickets %></li>
+  <li class="list-group-item"><strong>Nausea Rating: </strong> <%= @attraction.nausea_rating %></li>
+  <li class="list-group-item"><strong>Happiness Rating: </strong> <%= @attraction.happiness_rating %></li>
+  <li class="list-group-item"><strong>Min Height: </strong> <%= @attraction.min_height %></li>
+</ul>
+
+<%= form_tag go_on_attraction_path, method: 'post' do %>
+  <%= submit_tag 'Go on this ride' %>
+<% end %>
